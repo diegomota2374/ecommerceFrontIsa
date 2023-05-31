@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Center from "./Center";
 import Button from "./Button";
+import ButtonLink from "./ButtonLink";
 
 const Bg = styled.div`
   background-color: #222;
@@ -47,10 +48,10 @@ export default function Featured({ product }) {
               <Title>{product.title}</Title>
               <Desc>{product.description}</Desc>
               <ButtonsWrapper>
-                <Button white outline>
+                <ButtonLink href={"/product/"+product._id} white={1} outline={1}>
                   Read more
-                </Button>
-                <Button primary>
+                </ButtonLink>
+                <Button primary outline>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
